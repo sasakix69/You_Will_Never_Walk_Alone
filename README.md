@@ -30,3 +30,6 @@
 
 ## 画面遷移図（プロトタイプ）
 https://xd.adobe.com/view/1d494f26-9533-45ce-b3d9-f8ba08cf7c3e-481a/
+
+## ER図
+https://i.gyazo.com/dbf7392011b6b6cbca9d31c4a821666b.png
