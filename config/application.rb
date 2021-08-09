@@ -25,10 +25,10 @@ module YouWillNeverWalkAlone
     config.load_defaults 6.0
 
     config.generators do |g|
-      g.assets false　#assetsを生成しない
-      g.helper false　#helperを生成しない
-      g.test_framework false　#testファイルを生成しない
-      g.skip_routes true　#ルーティングを生成しない
+      g.skip_routes true
+      g.assets false
+      g.helper false
+      g.test_framework false
     end
 
     # Settings in config/environments/* take precedence over those specified here.
