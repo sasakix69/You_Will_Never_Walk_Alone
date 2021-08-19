@@ -266,6 +266,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   listen (~> 3.2)
   mysql2 (>= 0.4.4)
+  omniauth
   omniauth-rails_csrf_protection
   omniauth-twitter
   puma (~> 4.1)
