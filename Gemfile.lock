@@ -111,16 +111,12 @@ GEM
     nokogiri (1.12.0-x86_64-darwin)
       racc (~> 1.4)
     oauth (0.5.6)
-    omniauth (2.0.4)
+    omniauth (1.9.1)
       hashie (>= 3.4.6)
       rack (>= 1.6.2, < 3)
-      rack-protection
     omniauth-oauth (1.2.0)
       oauth
       omniauth (>= 1.0, < 3)
-    omniauth-rails_csrf_protection (1.0.0)
-      actionpack (>= 4.2)
-      omniauth (~> 2.0)
     omniauth-twitter (1.4.0)
       omniauth-oauth (~> 1.1)
       rack
@@ -132,8 +128,6 @@ GEM
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
-    rack-protection (2.1.0)
-      rack
     rack-proxy (0.7.0)
       rack
     rack-test (1.1.0)
@@ -266,8 +260,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   listen (~> 3.2)
   mysql2 (>= 0.4.4)
-  omniauth
-  omniauth-rails_csrf_protection
+  omniauth (= 1.9.1)
   omniauth-twitter
   puma (~> 4.1)
   rails (~> 6.0.4)
