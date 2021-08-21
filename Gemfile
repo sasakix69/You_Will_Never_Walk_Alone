@@ -30,6 +30,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'dotenv-rails'
 gem 'devise'
+gem 'devise-i18n'
 gem 'omniauth', '1.9.1'
 gem 'omniauth-twitter'
 
