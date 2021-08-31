@@ -23,7 +23,10 @@ module YouWillNeverWalkAlone
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
-    config.i18n.default_locale = :ja # 日本語に国際化
+    # 日本語に国際化
+    config.i18n.default_locale = :ja
+    # 複数のローケルファイルが読み込まれるように設定
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
 
     config.generators do |g|
       g.skip_routes true
