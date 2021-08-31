@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
+  # ログイン済ユーザーのみにアクセスを許可する
+  before_action :authenticate_user!
 
   protected
   # :account_update を記述して、新規登録のときは必要ないが、あとからプロフィール充実させるときは許可したいカラム名をここに追記

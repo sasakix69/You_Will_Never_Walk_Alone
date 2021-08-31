@@ -4,6 +4,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:twitter]
 
+  validates :name, presence: true, on: :update
+  validates :email, presence: true
+  # ユーザー作成(新規登録)の時だけパスワード入力必須にする on: :create をセットで記述。
+  validates :password, presence: true, on: :create
+
+  attr_accessor :current_password
+
   # Twitter認証ログイン用
   # ユーザーの情報があれば探し、無ければ作成する
   def self.find_for_oauth(auth)
