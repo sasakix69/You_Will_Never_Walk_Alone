@@ -24,6 +24,10 @@ ActiveRecord::Schema.define(version: 2021_08_13_134329) do
     t.string "provider"
     t.string "uid"
     t.string "username"
+    t.string "image"
+    t.string "avatar"
+    t.string "favorite_player"
+    t.integer "kop_history"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
