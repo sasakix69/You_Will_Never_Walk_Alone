@@ -1,2 +1,26 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h2><%= t('.title') %></h2>
+<img src=<%= @user.image %>>
+<table class="table">
+  <tbody>
+    <tr>
+      <th class="table__col1"><%= User.human_attribute_name('name') %></th>
+      <td class="table__col2"><%= @user.name %></td>
+    </tr>
+    <tr>
+      <th class="table__col1"><%= User.human_attribute_name('email') %></th>
+      <td class="table__col2"><%= @user.email %></td>
+    </tr>
+    <tr>
+      <th class="table__col1"><%= User.human_attribute_name('favorite_player') %></th>
+      <td class="table__col2"><%= @user.favorite_player %></td>
+    </tr>
+    <tr>
+      <th class="table__col1"><%= User.human_attribute_name('kop_history') %></th>
+      <td class="table__col2"><%= @user.kop_history %>年</td>
+    </tr>
+  </tbody>
+</table>
+
+# ここに掲示板にした自分の投稿が見られる様に追記する。
+
+<%= link_to t('.edit'), edit_user_registration_path %>
