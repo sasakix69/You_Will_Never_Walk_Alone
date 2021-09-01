@@ -26,6 +26,9 @@ ja:
         unlock_token: ロック解除用トークン
         updated_at: 更新日
         name: ユーザー名
+        image: プロフィール画像
+        favorite_player: 好きな選手
+        kop_history: ファン歴
     models:
       user: ユーザー
   devise:
@@ -137,6 +140,10 @@ ja:
       send_instructions: アカウントのロック解除方法を数分以内にメールでご連絡します。
       send_paranoid_instructions: アカウントが見つかった場合、アカウントのロック解除方法を数分以内にメールでご連絡します。
       unlocked: アカウントをロック解除しました。
+  users:
+    show:
+      title: プロフィール
+      edit: 編集する    
   errors:
     messages:
       already_confirmed: は既に登録済みです。ログインしてください。
