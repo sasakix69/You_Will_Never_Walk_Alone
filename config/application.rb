@@ -25,6 +25,8 @@ module YouWillNeverWalkAlone
     config.load_defaults 6.0
     # 日本語に国際化
     config.i18n.default_locale = :ja
+    # タイムゾーンの設定
+    config.time_zone = 'Asia/Tokyo'
     # 複数のローケルファイルが読み込まれるように設定
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
 
