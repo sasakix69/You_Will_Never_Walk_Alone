@@ -2,7 +2,10 @@
  *= require_tree .
  *= require_self
  */
+ 
  @import 'top';
+ @import "bootstrap/scss/bootstrap";
+
  // max-width
 
  .mw-md {
