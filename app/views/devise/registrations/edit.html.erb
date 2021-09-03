@@ -1,65 +1,60 @@
-<h2><%= t('.title') %></h2>
+<h1><%= t('.title', resource: resource_name.to_s.humanize) %></h1>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= bootstrap_devise_error_messages! %>
 
   <img src=<%= @user.image %>>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :image %><br />
-    <%= f.file_field :image, autofocus: true, autocomplete: "image" %>
+    <%= f.file_field :image, autofocus: true, autocomplete: "image", class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control' %>
   </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :password %> <i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it') %>)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+  <div class="form-group">
+    <%= f.label :password %>
+    <%= f.password_field :password, autocomplete: 'new-password', class: 'form-control' %>
     <% if @minimum_password_length %>
-      <br />
       <em><%= @minimum_password_length %><%= t('.characters_minimum') %></em>
     <% end %>
+
+    <small class="form-text text-muted">(<%= t('.leave_blank_if_you_don_t_want_to_change_it') %>)</small>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  <div class="form-group">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, autocomplete: 'new-password', class: 'form-control'  %>
   </div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(<%= t('.we_need_your_current_password_to_confirm_your_changes') %>)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-
-  <div class="field">
+  <div class="form-group">
     <%= f.label :favorite_player %><br />
-    <%= f.text_field :favorite_player, autofocus: true, autocomplete: "favorite_player" %>
+    <%= f.text_field :favorite_player, autofocus: true, autocomplete: "favorite_player", class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :kop_history %><br />
     <%= f.select :kop_history, options_for_select(1..85) %> 年
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit t('.update'), class: 'btn btn-primary' %>
   </div>
 <% end %>
 
-<h3><%= t('.cancel_my_account') %></h3>
+<hr class="devise-link my-5">
+  <div class="form-group">
+    <%= link_to t('.back'), user_path(:id), class: 'btn btn-info btn-block mb-4' %>
+  </div>
 
-<p><%= button_to t('.cancel_my_account') , registration_path(resource_name), data: { confirm: t('.are_you_sure') }, method: :delete %></p>
-
-<%= link_to t('.back'), :back %>
+  <div class="form-group">
+  <%= link_to t('.cancel_my_account'), registration_path(resource_name), data: {confirm: t('.are_you_sure')}, method: :delete, class: 'btn btn-danger btn-block' %>
+  </div>
