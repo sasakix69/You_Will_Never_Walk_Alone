@@ -17,9 +17,9 @@
     <% else %>  
       <%= render 'shared/before_login_header' %>
     <% end %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="container-fluid py-4 <%= devise_controller? ? 'mw-md' : 'mw-xl' %>">
+      <%= yield %>
+    </div>
     <%= render 'shared/footer' %>
   </body>
 </html>
