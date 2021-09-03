@@ -35,7 +35,6 @@ gem 'devise-i18n-views'
 gem 'omniauth', '1.9.1'
 gem 'omniauth-twitter'
 gem 'rails-i18n', '~> 6.0.0' # For 6.0.0 or higher
-gem 'devise-bootstrap-views', '~> 1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
