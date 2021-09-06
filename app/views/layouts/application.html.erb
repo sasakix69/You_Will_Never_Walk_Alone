@@ -8,6 +8,7 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
 
   <body>
@@ -16,9 +17,13 @@
     <% else %>  
       <%= render 'shared/before_login_header' %>
     <% end %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <% if devise_controller? %>
+      <div class="container-fluid py-4 mw-md">
+      <%= yield %>
+      </div>
+    <% else %>
+      <%= yield %>
+    <% end %>
     <%= render 'shared/footer' %>
   </body>
 </html>
