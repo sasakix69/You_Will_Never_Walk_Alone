@@ -16,7 +16,7 @@
  // 「ログインしました」などのフラッシュ用スタイル
 
  .alert-notice {
-  @extend .alert-info !optional;
+  @extend .alert-success !optional;
  }
 
  .alert-alert {
