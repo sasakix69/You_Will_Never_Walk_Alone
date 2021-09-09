@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:twitter]
 
   validates :name, presence: true, on: :update
-  validates :email, presence: true
+  validates :email, presence: true, uniqueness: true
   # ユーザー作成(新規登録)の時だけパスワード入力必須にする on: :create をセットで記述。
   validates :password, presence: true, on: :create
 
