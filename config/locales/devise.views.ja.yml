@@ -29,6 +29,8 @@ ja:
         image: プロフィール画像
         favorite_player: 好きな選手
         kop_history: ファン歴
+      board:
+        body: 本文  
     models:
       user: ユーザー
   devise:
@@ -143,7 +145,10 @@ ja:
   users:
     show:
       title: プロフィール
-      edit: 編集する    
+      edit: 編集する
+  boards:
+    index:
+      no_result: 掲示板がありません。      
   errors:
     messages:
       already_confirmed: は既に登録済みです。ログインしてください。
