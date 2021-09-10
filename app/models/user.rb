@@ -1,11 +1,12 @@
 class User < ApplicationRecord
+  has_many :boards, dependent: :destroy
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:twitter]
 
   validates :name, presence: true, on: :update
-  validates :email, presence: true
+  validates :email, presence: true, uniqueness: true
   # ユーザー作成(新規登録)の時だけパスワード入力必須にする on: :create をセットで記述。
   validates :password, presence: true, on: :create
 

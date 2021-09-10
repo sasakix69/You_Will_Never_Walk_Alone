@@ -1,0 +1,24 @@
+<div class="col-sm-12 col-lg-4 mb-3">
+  <div id="board-id-<%= board.id %>">
+    <div class="card">
+      <%= image_tag 'board_sample.jpeg', class: 'card-img-top', size: '300x200' %>
+      <div class="card-body">
+        <div class='mr10 float-right'>
+          <a href="#"><%= fa_icon 'trash', class: 'pr-1' %></a>
+          <a href="#"><%= fa_icon 'pen' %></a>
+        </div>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <%= fa_icon 'user' %>
+            <%= board.user.name %>
+          </li>
+          <li class="list-inline-item">
+            <%= fa_icon 'far calendar-alt' %>
+            <%= l board.created_at, format: :long %>
+          </li>
+        </ul>
+        <p class="card-text"><%= board.body %></p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,12 @@
  @import 'top';
  @import "bootstrap/scss/bootstrap";
  @import "font-awesome";
-
+ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+ @import '@fortawesome/fontawesome-free/scss/fontawesome';
+ @import '@fortawesome/fontawesome-free/scss/solid';
+ @import '@fortawesome/fontawesome-free/scss/regular';
+ @import '@fortawesome/fontawesome-free/scss/brands';
+ @import '@fortawesome/fontawesome-free/scss/v4-shims';
 
  // max-width
 
@@ -23,6 +28,6 @@
   @extend .alert-danger !optional;
  }
 
- i.fa.fa-twitter {
-  color: white;
+ .twitter {
+   color: #ffffff;
  }
