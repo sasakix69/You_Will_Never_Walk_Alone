@@ -53,3 +53,6 @@ production:
   database: You_Will_Never_Walk_Alone_production
   username: You_Will_Never_Walk_Alone
   password: <%= ENV['YOU_WILL_NEVER_WALK_ALONE_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5

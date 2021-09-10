@@ -5,8 +5,6 @@ ruby '3.0.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.0.4'
-# Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.4.4'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -38,6 +36,7 @@ gem 'rails-i18n', '~> 6.0.0' # For 6.0.0 or higher
 gem 'font-awesome-rails'
 
 group :development, :test do
+  gem 'mysql2', '>= 0.4.4'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
@@ -54,6 +53,10 @@ group :development do
   gem 'rubocop-rails', require: false
   gem 'better_errors'
   gem 'binding_of_caller'
+end
+
+group :production do
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
